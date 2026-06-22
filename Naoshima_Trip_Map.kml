@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>나오시마 여행 2026.07.01-07.02 (4인)</name>
+    <description>다카마쓰·나오시마 4박 5일 여행 - 수요미식회 (Oh Sung Jin 외 3인)</description>
+
+    <Style id="day1">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day2">
+      <IconStyle>
+        <color>ffff8800</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="food">
+      <IconStyle>
+        <color>ff00aa00</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-diamond.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="lodging">
+      <IconStyle>
+        <color>ffaa00aa</color>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="port">
+      <IconStyle>
+        <color>ff888888</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-square.png</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Folder>
+      <name>다카마쓰 거점</name>
+      <Placemark>
+        <name>JR Hotel Clement Takamatsu (호텔)</name>
+        <description>6/30, 7/2 숙박. 다카마쓰역·다카마쓰항 도보 3분</description>
+        <styleUrl>#lodging</styleUrl>
+        <Point><coordinates>134.0466,34.3522,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>다카마쓰항 (페리 터미널)</name>
+        <description>7/1 08:12 페리 출발 / 7/2 페리 도착</description>
+        <styleUrl>#port</styleUrl>
+        <Point><coordinates>134.0481,34.3548,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 1 (7/1 수) - 베넷세 미술관 데이</name>
+
+      <Placemark>
+        <name>① 미야노우라항 (페리 도착, 09:02)</name>
+        <description>다카마쓰에서 페리 도착. 마을버스로 츠츠지소행</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>133.9931,34.4604,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>② OHANA 게스트하우스 (짐 보관)</name>
+        <description>7/1 숙박. 노란 호박 도보 3분. 09:40 짐 보관 후 미술관 출발</description>
+        <styleUrl>#lodging</styleUrl>
+        <Point><coordinates>134.0035,34.4475,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>③ 지중미술관 Chichu Art Museum (10:45 예약)</name>
+        <description>모네·터렐·드 마리아. 안도 다다오 건축. 90분 소요</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>133.9924,34.4577,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>④ 이우환미술관 Lee Ufan Museum (12:30)</name>
+        <description>안도 다다오 × 이우환. 45분 소요</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>133.9948,34.4535,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑤ EAT LOCAL NAOSHIMA SHOKUDO (점심, 13:30)</name>
+        <description>OHANA 옆, 직도 식자재 일식 정식. 11:00~14:30 L.O.</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>134.0010,34.4498,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑥ 베넷세하우스 뮤지엄 + 밸리 갤러리 (14:30 예약)</name>
+        <description>호크니·바스키아·스기모토·쿠사마. 90분 소요</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>133.9970,34.4520,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑦ 노란 호박 Yellow Pumpkin (17:00 사진)</name>
+        <description>쿠사마 야요이. OHANA 도보 3분. 츠츠지소 부두</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>134.0006,34.4492,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑧ 빨간 호박 Red Pumpkin (18:00 사진)</name>
+        <description>쿠사마 야요이. 미야노우라 페리 옆</description>
+        <styleUrl>#day1</styleUrl>
+        <Point><coordinates>133.9925,34.4615,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑨ New Olympia (저녁 18:30 예약 필수)</name>
+        <description>회·사시미 정찬. 17:00~22:00 (L.O. 21:00, 입장 20:30까지). 예약 필수, 작은 아이 불가. 4인 ¥30,000~40,000 예상</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>133.9985,34.4625,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 2 (7/2 목) - 혼무라 + 신미술관</name>
+
+      <Placemark>
+        <name>① OHANA 체크아웃 (08:30)</name>
+        <description>짐 미야노우라 코인로커로 이동</description>
+        <styleUrl>#lodging</styleUrl>
+        <Point><coordinates>134.0035,34.4475,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>② SPARKY'S Coffee (아침 09:10)</name>
+        <description>미야노우라 2310-40. 영화 테마 카페. 모닝 콤보 ¥600. 08:00 오픈</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>133.9939,34.4619,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>③ 나오시마 신미술관 Naoshima New Museum of Art (10:30)</name>
+        <description>2025년 5월 개관. 안도 다다오 설계. 아시아 12작가 사이트 인스톨레이션. 90분 소요</description>
+        <styleUrl>#day2</styleUrl>
+        <Point><coordinates>134.0024,34.4662,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>④ 혼무라 Honmura - Art House Project (12:00~)</name>
+        <description>카도야·미나미데라·고오신사·이시바시·고카이쇼·하이샤 6곳 + 안도뮤지엄. 공통권</description>
+        <styleUrl>#day2</styleUrl>
+        <Point><coordinates>134.0070,34.4625,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑤ NAOSHIMA-café Konichiwa (점심 13:00)</name>
+        <description>수제 카레·시즈널 리조토. 10:00~18:00. 옛 일본 가옥 개조</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>134.0048,34.4636,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>⑥ 미야노우라항 (15:00 다카마쓰행 페리)</name>
+        <description>코인로커 짐 픽업 후 다카마쓰행</description>
+        <styleUrl>#port</styleUrl>
+        <Point><coordinates>133.9931,34.4604,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>백업 식당 (필요 시)</name>
+      <Placemark>
+        <name>Naoshima Pasta REGARO (이탈리안)</name>
+        <description>수요일 영업, 목요일 휴무. 18:00~20:30 L.O. New Olympia 백업</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>134.0042,34.4520,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Cin.na.mon (이자카야)</name>
+        <description>미야노우라. 11~14, 17:30~21. 예약 권장</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>133.9962,34.4628,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Genmai Aisunao (비건 정식)</name>
+        <description>혼무라. 11:00~14:30. 월/화 휴무</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>134.0058,34.4615,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>LUKE'S PIZZA &amp; GRILL</name>
+        <description>혼무라. 점심·저녁 영업. 화덕 피자</description>
+        <styleUrl>#food</styleUrl>
+        <Point><coordinates>134.0068,34.4630,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>사진 명소 · 부가 관람</name>
+      <Placemark>
+        <name>I♥湯 (직도 목욕탕)</name>
+        <description>오타케 신로 아트 목욕탕. 미야노우라</description>
+        <Point><coordinates>133.9942,34.4615,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>海景 - 杉本博司 시사이드 작품</name>
+        <description>OHANA 도보 12분. 7/1 17:30 산책 권장</description>
+        <Point><coordinates>133.9945,34.4490,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>나오시마 파빌리온</name>
+        <description>후지모토 소스케 건축. 미야노우라</description>
+        <Point><coordinates>133.9942,34.4630,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+  </Document>
+</kml>

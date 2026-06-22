@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1B4965">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>다카마쓰·나오시마 · 수요미식회</title>
+<meta name="description" content="2026.06.30~07.03 다카마쓰·나오시마 여행 일정">
+<style>
+:root{
+  /* Modern Travel Palette */
+  --bg:#FFF9F0;
+  --surface:#FFFFFF;
+  --surface-soft:#FBF6EC;
+  --primary:#1B4965;
+  --primary-dark:#0F3A52;
+  --accent:#FF6B35;
+  --accent-soft:#FFE5D9;
+  --teal:#62B6CB;
+  --teal-soft:#BEE9E8;
+  --d1:#5FA8D3;
+  --d2:#E76F51;
+  --d3:#2A9D8F;
+  --d4:#9D4EDD;
+  --gold:#F4A261;
+  --text:#0D1B2A;
+  --text-mid:#3D5A6C;
+  --text-soft:#6B7280;
+  --border:#E8E2D5;
+  --border-soft:#F0EAE0;
+  --shadow:0 2px 12px rgba(27,73,101,0.06);
+  --shadow-hover:0 4px 20px rgba(27,73,101,0.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  text-size-adjust:100%;
+  overscroll-behavior-y:contain;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  font-size:15px;
+  padding-bottom:88px;
+  max-width:100vw;
+  overflow-x:hidden;
+}
+
+/* ============ HEADER ============ */
+header{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
+  color:white;
+  padding:20px 18px 18px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 1px 8px rgba(0,0,0,0.08);
+}
+header h1{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:2px;
+  letter-spacing:-0.3px;
+}
+header .sub{
+  font-size:11px;
+  opacity:0.75;
+  letter-spacing:0.5px;
+}
+header .row2{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-top:6px;
+}
+header .dates{
+  font-size:13px;
+  font-weight:500;
+  opacity:0.95;
+}
+header .dday{
+  background:var(--accent);
+  color:white;
+  padding:4px 10px;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.3px;
+}
+.map-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  background:rgba(255,255,255,0.15);
+  border:1.5px solid rgba(255,255,255,0.3);
+  border-radius:12px;
+  color:white;
+  text-decoration:none;
+  margin-left:8px;
+  flex-shrink:0;
+  transition:all 0.2s;
+}
+.map-btn:active{
+  background:rgba(255,255,255,0.25);
+  transform:scale(0.95);
+}
+
+/* Day-level map link */
+.day-map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:var(--teal-soft);
+  color:var(--primary);
+  padding:5px 10px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:600;
+  text-decoration:none;
+  margin-left:6px;
+}
+
+/* Featured map card */
+.map-feature{
+  background:linear-gradient(135deg,var(--primary) 0%,#2A6F8F 100%);
+  color:white;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:14px;
+  box-shadow:0 4px 16px rgba(27,73,101,0.2);
+}
+.map-feature h3{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.map-feature p{
+  font-size:12px;
+  opacity:0.9;
+  margin-bottom:14px;
+  line-height:1.5;
+}
+.map-feature a.map-open-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:white;
+  color:var(--primary);
+  padding:11px 18px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+  width:100%;
+  justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.map-feature a.map-open-btn:active{
+  transform:scale(0.97);
+}
+.map-feature .pins{
+  display:flex;
+  gap:6px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+.map-feature .pins span{
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:3px 8px;
+  border-radius:6px;
+  font-size:10px;
+}
+
+/* ============ NOW BANNER ============ */
+.now-banner{
+  background:linear-gradient(135deg,var(--accent) 0%,#FF5722 100%);
+  color:white;
+  padding:10px 16px;
+  font-size:12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  position:sticky;
+  top:78px;
+  z-index:99;
+  box-shadow:0 2px 6px rgba(255,107,53,0.2);
+}
+.now-banner .pulse-dot{
+  width:8px;
+  height:8px;
+  background:white;
+  border-radius:50%;
+  animation:pulse 1.5s infinite;
+  flex-shrink:0;
+}
+.now-banner .next-event{
+  flex:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.now-banner.hidden{display:none;}
+
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1);}
+  50%{opacity:0.5;transform:scale(1.3);}
+}
+
+/* ============ NAV TABS ============ */
+nav{
+  display:flex;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-top:1px solid var(--border);
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:100;
+  padding:8px 4px calc(8px + env(safe-area-inset-bottom));
+  box-shadow:0 -2px 12px rgba(0,0,0,0.06);
+}
+nav button{
+  flex:1;
+  padding:8px 0 6px;
+  border:none;
+  background:transparent;
+  font-size:11px;
+  font-weight:600;
+  color:var(--text-soft);
+  cursor:pointer;
+  font-family:inherit;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:3px;
+  transition:color 0.2s;
+  position:relative;
+  min-height:48px;
+}
+nav button .ic{
+  font-size:22px;
+  transition:transform 0.2s;
+}
+nav button.active{
+  color:var(--accent);
+}
+nav button.active .ic{
+  transform:translateY(-2px);
+}
+nav button.active::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:24px;
+  height:3px;
+  background:var(--accent);
+  border-radius:0 0 4px 4px;
+}
+
+main{padding:14px 14px 0;}
+
+.section{display:none;animation:fadeIn 0.3s ease;}
+.section.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============ DAY CARD ============ */
+.day-card{
+  background:var(--surface);
+  border-radius:18px;
+  margin-bottom:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border-soft);
+}
+.day-header{
+  padding:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--surface);
+  transition:background 0.15s;
+  min-height:72px;
+}
+.day-header:active{background:var(--surface-soft);}
+.day-header .info{flex:1;}
+.day-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  font-size:10px;
+  font-weight:800;
+  padding:4px 10px;
+  border-radius:12px;
+  color:white;
+  margin-bottom:6px;
+  letter-spacing:0.5px;
+}
+.day-tag.d1{background:var(--d1);}
+.day-tag.d2{background:var(--d2);}
+.day-tag.d3{background:var(--d3);}
+.day-tag.d4{background:var(--d4);}
+.day-date{
+  font-size:17px;
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:-0.3px;
+}
+.day-title{
+  font-size:13px;
+  color:var(--text-soft);
+  margin-top:2px;
+  font-weight:500;
+}
+.day-toggle{
+  font-size:22px;
+  color:var(--text-soft);
+  transition:transform 0.25s;
+  margin-left:8px;
+}
+.day-card.open .day-toggle{transform:rotate(180deg);}
+
+.day-body{
+  display:none;
+  padding:0 16px 18px;
+  animation:slideDown 0.25s ease;
+}
+.day-card.open .day-body{display:block;}
+@keyframes slideDown{from{opacity:0;}to{opacity:1;}}
+
+/* ============ QUICK INFO ============ */
+.quickinfo{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin:6px 0 14px;
+}
+.quickinfo .qi{
+  background:var(--accent-soft);
+  border-radius:10px;
+  padding:6px 10px;
+  font-size:11px;
+  color:var(--text-mid);
+  font-weight:500;
+}
+.quickinfo .qi b{color:var(--accent);font-weight:700;}
+
+/* ============ TIMELINE ============ */
+.timeline{
+  position:relative;
+  padding-left:64px;
+  padding-top:4px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50px;
+  top:14px;
+  bottom:14px;
+  width:2px;
+  background:linear-gradient(to bottom,var(--border),var(--border-soft));
+  border-radius:1px;
+}
+
+.event{
+  position:relative;
+  padding:10px 0;
+}
+.event::before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:14px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--accent);
+  border:2.5px solid white;
+  box-shadow:0 0 0 2px var(--accent);
+  z-index:2;
+}
+.event.minor::before{
+  background:var(--text-soft);
+  box-shadow:0 0 0 2px var(--text-soft);
+  width:7px;
+  height:7px;
+  left:-16px;
+  top:18px;
+}
+.event.highlight::before{
+  background:var(--accent);
+  width:13px;
+  height:13px;
+  left:-19px;
+  top:13px;
+}
+
+/* CURRENT EVENT - BLINKING */
+.event.current::before{
+  background:var(--accent) !important;
+  box-shadow:0 0 0 3px var(--accent), 0 0 0 8px rgba(255,107,53,0.3) !important;
+  animation:currentPulse 1.6s infinite;
+}
+.event.current{
+  background:linear-gradient(90deg,var(--accent-soft) 0%,rgba(255,229,217,0) 80%);
+  border-radius:10px;
+  padding-left:8px;
+  margin-left:-8px;
+}
+@keyframes currentPulse{
+  0%,100%{
+    box-shadow:0 0 0 3px var(--accent),0 0 0 8px rgba(255,107,53,0.3);
+  }
+  50%{
+    box-shadow:0 0 0 3px var(--accent),0 0 0 14px rgba(255,107,53,0);
+  }
+}
+
+.event .time{
+  position:absolute;
+  left:-64px;
+  top:11px;
+  width:44px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--primary);
+  text-align:right;
+  letter-spacing:-0.2px;
+}
+.event .title{
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:3px;
+  line-height:1.4;
+}
+.event .desc{
+  font-size:12.5px;
+  color:var(--text-soft);
+  line-height:1.5;
+}
+.event.highlight .title{color:var(--accent);font-weight:700;}
+.event.minor .title{font-size:13px;color:var(--text-mid);font-weight:500;}
+
+.event .tag{
+  display:inline-block;
+  font-size:10px;
+  padding:2px 7px;
+  border-radius:8px;
+  margin-left:4px;
+  vertical-align:1px;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.tag.ticket{background:#FFF3CD;color:#856404;}
+.tag.meal{background:#D4EDDA;color:#155724;}
+.tag.transport{background:var(--teal-soft);color:var(--primary);}
+.tag.option{background:#FFE0EC;color:#B22863;}
+
+/* ============ OPTION CARDS IN TIMELINE ============ */
+.options-inline{
+  margin:10px 0;
+  background:var(--surface-soft);
+  border-radius:14px;
+  padding:12px;
+  border:1px dashed var(--accent);
+}
+.options-inline .opt-label-head{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.opt-card{
+  background:white;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:11px 12px;
+  margin-bottom:6px;
+  transition:all 0.2s;
+}
+.opt-card:last-child{margin-bottom:0;}
+.opt-card.recommended{
+  border-color:var(--d3);
+  background:#F0FFF8;
+}
+.opt-card .opt-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:3px;
+}
+.opt-card .opt-title .star{
+  background:var(--d3);
+  color:white;
+  font-size:9px;
+  padding:1px 6px;
+  border-radius:8px;
+  font-weight:700;
+}
+.opt-card .opt-desc{
+  font-size:11.5px;
+  color:var(--text-soft);
+  line-height:1.5;
+}
+.opt-card .opt-meta{
+  display:flex;
+  gap:6px;
+  margin-top:6px;
+  flex-wrap:wrap;
+}
+.opt-card .opt-meta span{
+  font-size:10px;
+  background:var(--surface-soft);
+  padding:2px 7px;
+  border-radius:6px;
+  color:var(--text-mid);
+}
+
+/* ============ INFO CARDS ============ */
+.card{
+  background:var(--surface);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:12px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border-soft);
+}
+.card h3{
+  font-size:15px;
+  color:var(--primary);
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+}
+.card h3 .icon{
+  font-size:22px;
+  background:var(--teal-soft);
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card .row{
+  display:flex;
+  padding:9px 0;
+  border-bottom:1px dashed var(--border-soft);
+  font-size:13px;
+  align-items:flex-start;
+}
+.card .row:last-child{border-bottom:none;}
+.card .row .label{
+  width:100px;
+  color:var(--text-soft);
+  font-weight:600;
+  flex-shrink:0;
+  font-size:12px;
+}
+.card .row .value{
+  flex:1;
+  color:var(--text);
+}
+.card .row .value b{color:var(--accent);}
+.card .note{
+  font-size:12px;
+  color:#B22863;
+  background:#FFE0EC;
+  padding:10px 12px;
+  border-radius:10px;
+  margin-top:12px;
+  line-height:1.5;
+  border-left:3px solid #B22863;
+}
+.card .tip{
+  font-size:12px;
+  color:#0F6B5C;
+  background:#D4F4E9;
+  padding:10px 12px;
+  border-radius:10px;
+  margin-top:10px;
+  line-height:1.5;
+  border-left:3px solid #2A9D8F;
+}
+
+/* ============ FERRY TIMETABLE ============ */
+.timetable{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  margin-top:12px;
+  border:1px solid var(--border-soft);
+}
+.timetable table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px;
+}
+.timetable th{
+  background:var(--primary);
+  color:white;
+  padding:9px 6px;
+  text-align:center;
+  font-weight:600;
+  font-size:11px;
+}
+.timetable td{
+  padding:9px 4px;
+  text-align:center;
+  border-bottom:1px solid var(--border-soft);
+}
+.timetable tr.highlight td{
+  background:var(--accent-soft);
+  font-weight:700;
+  color:var(--accent);
+}
+
+/* ============ RESTAURANT ============ */
+.restaurant{
+  background:var(--surface);
+  border-radius:14px;
+  padding:13px;
+  margin-bottom:10px;
+  border:1px solid var(--border-soft);
+  display:flex;
+  gap:11px;
+  box-shadow:var(--shadow);
+}
+.restaurant .meal-time{
+  width:58px;
+  flex-shrink:0;
+  text-align:center;
+  background:var(--surface-soft);
+  border-radius:10px;
+  padding:7px 4px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.restaurant .meal-time .day{
+  font-size:10px;
+  color:var(--text-soft);
+  font-weight:600;
+}
+.restaurant .meal-time .time{
+  font-size:13px;
+  color:var(--primary);
+  font-weight:800;
+  margin:2px 0;
+}
+.restaurant .meal-time .kind{
+  font-size:9px;
+  color:var(--text-soft);
+}
+.restaurant .info{flex:1;min-width:0;}
+.restaurant .name{
+  font-size:14px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:4px;
+  line-height:1.3;
+}
+.restaurant .name .ja{
+  font-size:11px;
+  color:var(--text-soft);
+  font-weight:500;
+  margin-left:4px;
+}
+.restaurant .meta{
+  font-size:11.5px;
+  color:var(--text-soft);
+  line-height:1.5;
+}
+.badge{
+  display:inline-block;
+  font-size:10px;
+  padding:2px 7px;
+  border-radius:7px;
+  margin-right:4px;
+  font-weight:700;
+  margin-bottom:3px;
+}
+.badge.booked{background:#D4F4E9;color:#0F6B5C;}
+.badge.walk-in{background:var(--teal-soft);color:var(--primary);}
+.badge.pending{background:#FFF3CD;color:#856404;}
+
+/* ============ EMERGENCY ============ */
+.emergency{
+  background:linear-gradient(135deg,#FFF0F0,#FFE8E8);
+  border:1px solid #FFD0D0;
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:12px;
+}
+.emergency h4{
+  font-size:14px;
+  color:#C0392B;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.emergency .contact{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:9px 0;
+  font-size:13px;
+  border-bottom:1px dashed rgba(192,57,43,0.15);
+  gap:8px;
+}
+.emergency .contact:last-child{border-bottom:none;}
+.emergency .contact span{flex:1;color:var(--text);}
+.emergency .contact a{
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  background:#C0392B;
+  padding:6px 12px;
+  border-radius:8px;
+  font-size:12px;
+  flex-shrink:0;
+}
+
+/* ============ SECTION TITLE ============ */
+.section-title{
+  font-size:18px;
+  font-weight:800;
+  color:var(--text);
+  margin:16px 4px 8px;
+  letter-spacing:-0.3px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section-title::before{
+  content:"";
+  width:4px;
+  height:18px;
+  background:var(--accent);
+  border-radius:2px;
+}
+.section-sub{
+  font-size:12px;
+  color:var(--text-soft);
+  margin:0 4px 14px 16px;
+}
+
+/* Misc */
+a.linkbtn{
+  display:inline-block;
+  background:var(--primary);
+  color:white;
+  padding:8px 14px;
+  border-radius:10px;
+  font-size:12px;
+  text-decoration:none;
+  margin-top:8px;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:28px 20px 12px;
+  font-size:11px;
+  color:var(--text-soft);
+}
+
+/* Mobile optimization */
+@media (max-width:380px){
+  body{font-size:14px;}
+  header h1{font-size:16px;}
+  main{padding:12px 12px 0;}
+  .day-header{padding:14px;min-height:64px;}
+  .day-date{font-size:16px;}
+  .day-body{padding:0 12px 14px;}
+  .timeline{padding-left:58px;}
+  .timeline::before{left:44px;}
+  .event .time{left:-58px;width:40px;font-size:11px;}
+  .event .title{font-size:13.5px;}
+  .event .desc{font-size:12px;}
+  .card{padding:14px;border-radius:14px;}
+  nav button{font-size:10px;}
+  nav button .ic{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+    <div style="flex:1;">
+      <h1>🗾 다카마쓰 · 나오시마</h1>
+      <div class="sub">水曜美食会 · Wednesday Gourmet Club</div>
+    </div>
+    <a href="https://maps.app.goo.gl/UcTzVwKmezg6w2Mb8" target="_blank" class="map-btn" title="구글 지도에서 전체 동선 보기">
+      <span style="font-size:18px;">🗺</span>
+      <span style="font-size:9px;font-weight:700;margin-top:1px;">MAP</span>
+    </a>
+  </div>
+  <div class="row2">
+    <div class="dates">2026. 6. 30 (화) — 7. 3 (금) · 4인</div>
+    <div class="dday" id="dday-pill">D-?</div>
+  </div>
+</header>
+
+<div class="now-banner" id="now-banner">
+  <div class="pulse-dot"></div>
+  <div class="next-event" id="next-event-text">일정 중…</div>
+</div>
+
+<main>
+
+<!-- ============ 일정 ============ -->
+<section id="schedule" class="section active">
+
+  <a href="https://maps.app.goo.gl/UcTzVwKmezg6w2Mb8" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--teal-soft),#A8E6CF);color:var(--primary);padding:12px 16px;border-radius:14px;font-size:13px;font-weight:700;text-decoration:none;margin-bottom:14px;border:1.5px solid var(--teal);box-shadow:0 2px 8px rgba(98,182,203,0.2);">
+    🗺 전체 동선을 Google Maps에서 보기 →
+  </a>
+
+  <!-- DAY 1 -->
+  <div class="day-card" data-day="2026-06-30">
+    <div class="day-header">
+      <div class="info">
+        <span class="day-tag d1">DAY 1</span>
+        <div class="day-date">6월 30일 (화)</div>
+        <div class="day-title">부산 → 다카마쓰 도착</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="quickinfo">
+        <div class="qi">출국 <b>17:20</b></div>
+        <div class="qi">착륙 <b>18:40</b></div>
+        <div class="qi">호텔 <b>20:15</b></div>
+      </div>
+      <div class="timeline">
+        <div class="event minor" data-time="15:30"><div class="time">15:30</div><div class="title">김해공항 집합</div><div class="desc">출국 2시간 전</div></div>
+        <div class="event" data-time="17:20"><div class="time">17:20</div><div class="title">부산 출발 (BX1325)</div><div class="desc">에어부산 직항 1시간 20분</div></div>
+        <div class="event" data-time="18:40"><div class="time">18:40</div><div class="title">다카마쓰 공항 도착</div><div class="desc">입국·수하물·세관 약 30분</div></div>
+        <div class="event" data-time="19:30"><div class="time">19:30</div><div class="title">공항 리무진 버스 <span class="tag transport">교통</span></div><div class="desc">¥1,000/인 × 4 · 약 40분 · 호텔 옆 종점</div></div>
+        <div class="event" data-time="20:15"><div class="time">20:15</div><div class="title">JR Hotel Clement 체크인 ✅</div><div class="desc">Standard Twin × 2 (4인) · 다카마쓰역 도보 1분</div></div>
+        <div class="event highlight" data-time="21:00"><div class="time">21:00</div><div class="title">🐙 たこ讃 さしみ一品 <span class="tag meal">저녁</span></div><div class="desc">사누키 문어·사시미 전문 이자카야 · 4.5⭐ · ¥2,000~6,000/인</div></div>
+        <div class="event minor" data-time="23:00"><div class="time">23:00</div><div class="title">호텔 복귀, 휴식</div><div class="desc">내일 06:30 기상</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-card" data-day="2026-07-01">
+    <div class="day-header">
+      <div class="info">
+        <span class="day-tag d2">DAY 2</span>
+        <div class="day-date">7월 1일 (수)</div>
+        <div class="day-title">나오시마 미술관 4관</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="quickinfo">
+        <div class="qi">페리 <b>08:12</b></div>
+        <div class="qi">티켓 <b>4관 예약</b></div>
+        <div class="qi">디너 <b>松 ¥6,000</b></div>
+        <div class="qi">막차 <b>20:45⚠️</b></div>
+      </div>
+      <div class="timeline">
+        <div class="event" data-time="06:30"><div class="time">06:30</div><div class="title">기상</div></div>
+        <div class="event minor" data-time="07:00"><div class="time">07:00</div><div class="title">호텔 조식 (뷔페)</div><div class="desc">¥2,500/인 · JR Clement 1F</div></div>
+        <div class="event" data-time="07:45"><div class="time">07:45</div><div class="title">체크아웃 + 큰 짐 호텔 보관</div><div class="desc">7/2 재투숙 · "Keep luggage until July 2"</div></div>
+        <div class="event highlight" data-time="08:12"><div class="time">08:12</div><div class="title">🚢 다카마쓰항 → 미야노우라 <span class="tag transport">교통</span></div><div class="desc">일반 페리 50분 · ¥520 × 4</div></div>
+        <div class="event" data-time="09:02"><div class="time">09:02</div><div class="title">미야노우라 도착 → 마을버스</div><div class="desc">츠츠지소 행 ¥100/인</div></div>
+        <div class="event minor" data-time="09:40"><div class="time">09:40</div><div class="title">OHANA 짐 보관 ✅</div><div class="desc">호스트 사전 컨택 완료</div></div>
+        <div class="event highlight" data-time="10:45"><div class="time">10:45</div><div class="title">🎟 지중미술관 <span class="tag ticket">티켓</span></div><div class="desc">¥2,500 × 4 · QR 스캔 · 30분 늦으면 무효</div></div>
+        <div class="event highlight" data-time="12:30"><div class="time">12:30</div><div class="title">🎟 이우환미술관 <span class="tag ticket">티켓</span></div><div class="desc">¥1,200 × 4 · 도보 5분 · 시간 미지정</div></div>
+        <div class="event" data-time="13:30"><div class="time">13:30</div><div class="title">🍱 EAT LOCAL NAOSHIMA SHOKUDO <span class="tag meal">점심</span></div><div class="desc">OHANA 도보 1분 · 일식 정식 · 워크인</div></div>
+        <div class="event highlight" data-time="14:30"><div class="time">14:30</div><div class="title">🎟 베넷세하우스 + 밸리 갤러리 <span class="tag ticket">티켓</span></div><div class="desc">¥1,300 × 4 통합 · 약 90분</div></div>
+        <div class="event minor" data-time="16:15"><div class="time">16:15</div><div class="title">OHANA 정식 체크인, 환복</div></div>
+        <div class="event" data-time="16:45"><div class="time">16:45</div><div class="title">🎃 노란 호박 사진</div><div class="desc">OHANA 도보 3분 · 츠츠지소 부두</div></div>
+        <div class="event" data-time="17:00"><div class="time">17:00</div><div class="title">마을버스 미야노우라행</div></div>
+        <div class="event" data-time="17:30"><div class="time">17:30</div><div class="title">🎃 빨간 호박 + I♥湯 외관</div></div>
+        <div class="event highlight" data-time="18:00"><div class="time">18:00</div><div class="title">🍣 New Olympia (松 ¥6,000) <span class="tag meal">✅ 예약 완료</span></div><div class="desc">미야노우라 · 회·사시미 정찬 · 사케 페어링</div></div>
+        <div class="event" data-time="20:00"><div class="time">20:00</div><div class="title">식사 마무리 + 야경 산책</div></div>
+        <div class="event highlight" data-time="20:45"><div class="time">20:45</div><div class="title">⚠️ 마지막 마을버스</div><div class="desc">놓치면 도보 1시간 또는 택시 087-892-2299</div></div>
+        <div class="event minor" data-time="21:00"><div class="time">21:00</div><div class="title">OHANA 도착, 휴식</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-card" data-day="2026-07-02">
+    <div class="day-header">
+      <div class="info">
+        <span class="day-tag d3">DAY 3</span>
+        <div class="day-date">7월 2일 (목)</div>
+        <div class="day-title">신미술관 + 다카마쓰 풀데이</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="quickinfo">
+        <div class="qi">페리 <b>12:40</b></div>
+        <div class="qi">우동 <b>バカ一代</b></div>
+        <div class="qi">디너 <b>해물 우마이몬야</b></div>
+      </div>
+      <div class="timeline">
+        <div class="event minor" data-time="04:30"><div class="time">04:30</div><div class="title">(자유) OHANA 일출 산책</div><div class="desc">일출 04:55 · 노란 호박 명품 · 희망자만</div></div>
+        <div class="event minor" data-time="07:30"><div class="time">07:30</div><div class="title">정상 기상</div></div>
+        <div class="event" data-time="08:30"><div class="time">08:30</div><div class="title">OHANA 체크아웃</div></div>
+        <div class="event" data-time="09:00"><div class="time">09:00</div><div class="title">미야노우라 코인로커 짐 보관</div><div class="desc">¥400/큰 사이즈</div></div>
+        <div class="event highlight" data-time="09:10"><div class="time">09:10</div><div class="title">☕ SPARKY's Coffee 모닝 <span class="tag meal">아침</span></div><div class="desc">미야노우라 2310-40 · 모닝 ¥600 × 4</div></div>
+        <div class="event" data-time="10:00"><div class="time">10:00</div><div class="title">마을버스 혼무라행</div></div>
+        <div class="event highlight" data-time="10:20"><div class="time">10:20</div><div class="title">🎟 나오시마 신미술관 <span class="tag ticket">티켓</span></div><div class="desc">¥1,500 × 4 · 안도 다다오 신작 · 90분</div></div>
+        <div class="event minor" data-time="11:50"><div class="time">11:50</div><div class="title">혼무라 짧은 사진 산책</div></div>
+        <div class="event" data-time="12:25"><div class="time">12:25</div><div class="title">마을버스 미야노우라</div></div>
+        <div class="event highlight" data-time="12:40"><div class="time">12:40</div><div class="title">🚢 페리 → 다카마쓰 <span class="tag transport">교통</span></div><div class="desc">¥520 × 4 · 50분</div></div>
+        <div class="event" data-time="13:30"><div class="time">13:30</div><div class="title">다카마쓰항 도착, 호텔 짐 임시 보관</div></div>
+        <div class="event highlight" data-time="13:45"><div class="time">13:45</div><div class="title">🍜 うどんバカ一代 <span class="tag meal">점심</span></div><div class="desc">호텔 도보 10분 · 부타다마 명점 · ¥800~1,200</div></div>
+        <div class="event minor" data-time="15:00"><div class="time">15:00</div><div class="title">호텔 얼리 체크인 시도</div></div>
+
+        <!-- DAY 3 OPTIONS -->
+        <div class="options-inline">
+          <div class="opt-label-head">🆓 15:00~18:30 자유 시간 선택</div>
+          <div class="opt-card recommended">
+            <div class="opt-title">A) 호텔 휴식 + 다마모공원 일몰 <span class="star">추천</span></div>
+            <div class="opt-desc">15시~17:30 객실 휴식 → 17:45 다마모공원 일몰 (1시간)</div>
+            <div class="opt-meta"><span>체력 🟢</span><span>¥200</span><span>가장 편함</span></div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">B) 리쓰린코엔 단축</div>
+            <div class="opt-desc">15시~16:30 핵심 90분 + 다실 말차 + 호텔 휴식</div>
+            <div class="opt-meta"><span>체력 🟡</span><span>¥410</span><span>정원파</span></div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">C) 미나미신마치 상점가</div>
+            <div class="opt-desc">15시~17시 일본 최장 아케이드 + 카페</div>
+            <div class="opt-meta"><span>체력 🟡</span><span>쇼핑별도</span><span>도시파</span></div>
+          </div>
+        </div>
+
+        <div class="event highlight" data-time="19:00"><div class="time">19:00</div><div class="title">🍣 해물 우마이몬야 하마카이도 <span class="tag meal">예약</span></div><div class="desc">해산물 이자카야 + 사케 페어링</div></div>
+        <div class="event minor" data-time="21:30"><div class="time">21:30</div><div class="title">(선택) 銀座 88 사케 바 2차</div></div>
+        <div class="event minor" data-time="23:00"><div class="time">23:00</div><div class="title">호텔 복귀</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-card" data-day="2026-07-03">
+    <div class="day-header">
+      <div class="info">
+        <span class="day-tag d4">DAY 4</span>
+        <div class="day-date">7월 3일 (금)</div>
+        <div class="day-title">다카마쓰 마지막 + 귀국</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="quickinfo">
+        <div class="qi">귀국 <b>19:35</b></div>
+        <div class="qi">점심 <b>세토노마쓰리</b></div>
+        <div class="qi">리무진 <b>17:00</b></div>
+      </div>
+      <div class="timeline">
+        <div class="event minor" data-time="08:00"><div class="time">08:00</div><div class="title">호텔 조식 (여유)</div></div>
+        <div class="event" data-time="09:30"><div class="time">09:30</div><div class="title">체크아웃, 짐 호텔 보관</div></div>
+
+        <!-- DAY 4 OPTIONS - 오전 -->
+        <div class="options-inline">
+          <div class="opt-label-head">🆓 10:00~12:00 오전 선택</div>
+          <div class="opt-card recommended">
+            <div class="opt-title">1) 다마모공원 + 선포트 산책 <span class="star">추천</span></div>
+            <div class="opt-desc">호텔 인근 가벼운 2시간 · 비행 컨디션 우선</div>
+            <div class="opt-meta"><span>🟢</span><span>¥200</span></div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">2) 리쓰린코엔</div>
+            <div class="opt-desc">미슐랭 3별 정원 · 오전 시원할 때</div>
+            <div class="opt-meta"><span>🟡</span><span>¥410</span></div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">3) 야시마 전망대</div>
+            <div class="opt-desc">세토내해 360도 · 코토덴 30분</div>
+            <div class="opt-meta"><span>🟡</span><span>¥830</span></div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">4) 나카노 우동 학교</div>
+            <div class="opt-desc">우동 만들기 체험 · 코토덴 60분</div>
+            <div class="opt-meta"><span>🟡</span><span>¥1,800</span></div>
+          </div>
+        </div>
+
+        <div class="event highlight" data-time="12:30"><div class="time">12:30</div><div class="title">🍣 세토노마쓰리 스시 효고마치점 <span class="tag meal">점심</span></div><div class="desc">초밥 + 사케 · ¥2,000~3,000/인</div></div>
+
+        <!-- DAY 4 OPTIONS - 오후 -->
+        <div class="options-inline">
+          <div class="opt-label-head">🆓 14:00~16:30 오후 선택</div>
+          <div class="opt-card">
+            <div class="opt-title">a) 미나미신마치 상점가 쇼핑</div>
+            <div class="opt-desc">기념품 + 카페</div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">b) 호텔 인근 카페</div>
+            <div class="opt-desc">SKY VIEW Lounge 등</div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">c) 다카마쓰 시 미술관</div>
+            <div class="opt-desc">¥200 · 코토덴 5분</div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-title">d) 호텔 로비에서 정리</div>
+            <div class="opt-desc">짐 정리·휴식</div>
+          </div>
+        </div>
+
+        <div class="event" data-time="16:30"><div class="time">16:30</div><div class="title">호텔 짐 픽업</div></div>
+        <div class="event" data-time="17:00"><div class="time">17:00</div><div class="title">공항 리무진 버스 <span class="tag transport">교통</span></div><div class="desc">¥1,000 × 4 · 약 40분</div></div>
+        <div class="event" data-time="17:50"><div class="time">17:50</div><div class="title">다카마쓰 공항 도착</div></div>
+        <div class="event highlight" data-time="19:35"><div class="time">19:35</div><div class="title">부산 출발 (BX1315)</div></div>
+        <div class="event" data-time="20:55"><div class="time">20:55</div><div class="title">✈️ 김해공항 도착</div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ 교통 ============ -->
+<section id="transport" class="section">
+
+  <div class="map-feature">
+    <h3>🗺 전체 동선 지도</h3>
+    <p>다카마쓰 + 나오시마 모든 장소를 한 지도에서 확인. 길찾기·내비게이션도 바로 사용.</p>
+    <div class="pins">
+      <span>📍 호텔</span>
+      <span>🛬 공항</span>
+      <span>🚢 페리</span>
+      <span>🎟 미술관</span>
+      <span>🍽 식당</span>
+      <span>🏨 OHANA</span>
+    </div>
+    <a href="https://maps.app.goo.gl/UcTzVwKmezg6w2Mb8" target="_blank" class="map-open-btn">
+      🗺 Google Maps에서 열기 →
+    </a>
+  </div>
+
+  <h2 class="section-title">공항 ↔ 시내</h2>
+  <p class="section-sub">호텔이 종점 도보 1분이라 리무진 버스 추천</p>
+
+  <div class="card">
+    <h3><span class="icon">🛬</span>공항 → 호텔 (6/30)</h3>
+    <div class="row"><div class="label">교통편</div><div class="value">공항 리무진 (코토덴)</div></div>
+    <div class="row"><div class="label">정류장</div><div class="value">공항 도착 로비 밖 우측</div></div>
+    <div class="row"><div class="label">소요</div><div class="value">약 40분</div></div>
+    <div class="row"><div class="label">요금</div><div class="value"><b>¥1,000/인</b> × 4 = ¥4,000</div></div>
+    <div class="row"><div class="label">예약</div><div class="value">불필요 (자유석)</div></div>
+    <div class="row"><div class="label">결제</div><div class="value">하차 시 현금 또는 IC카드</div></div>
+    <div class="tip">📌 18:40 도착 → 19:30 버스 → 20:10 다카마쓰역 → 20:15 호텔</div>
+    <div class="note">⚠️ ¥1,000 지폐 4장 미리 준비</div>
+    <a href="https://www.kotosan.co.jp/en/limousine/" target="_blank" class="linkbtn">코토덴 공식 시간표 →</a>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">✈️</span>호텔 → 공항 (7/3)</h3>
+    <div class="row"><div class="label">출발지</div><div class="value">다카마쓰역 북쪽 광장 (도보 1분)</div></div>
+    <div class="row"><div class="label">권장 출발</div><div class="value"><b>17:00 또는 17:30 편</b></div></div>
+    <div class="row"><div class="label">공항 도착</div><div class="value">17:50 (출국 1시간 30분 전)</div></div>
+    <div class="row"><div class="label">요금</div><div class="value">¥1,000/인 × 4</div></div>
+  </div>
+
+  <h2 class="section-title">다카마쓰 ↔ 나오시마 페리</h2>
+  <p class="section-sub">다카마쓰항은 호텔 도보 3분</p>
+
+  <div class="card">
+    <h3><span class="icon">🚢</span>다카마쓰 → 미야노우라 (7/1 아침)</h3>
+    <div class="row"><div class="label">권장</div><div class="value"><b>08:12 일반 페리</b> · 50분 · ¥520</div></div>
+    <div class="row"><div class="label">도착</div><div class="value">09:02 미야노우라</div></div>
+
+    <div class="timetable">
+      <table>
+        <thead><tr><th>출발</th><th>유형</th><th>소요</th><th>요금</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td>07:20</td><td>고속선</td><td>30분</td><td>¥1,220</td><td>이름</td></tr>
+          <tr class="highlight"><td>08:12</td><td>일반</td><td>50분</td><td>¥520</td><td>★ 추천</td></tr>
+          <tr><td>09:20</td><td>고속선</td><td>30분</td><td>¥1,220</td><td>빠듯</td></tr>
+          <tr><td>10:14</td><td>일반</td><td>50분</td><td>¥520</td><td>늦음</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a href="https://www.shikokukisen.com/en/instant/" target="_blank" class="linkbtn">시코쿠키센 공식 →</a>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">🚢</span>미야노우라 → 다카마쓰 (7/2 오후)</h3>
+    <div class="row"><div class="label">권장</div><div class="value"><b>12:40 일반 페리</b> · ¥520</div></div>
+    <div class="row"><div class="label">도착</div><div class="value">13:30 다카마쓰항</div></div>
+
+    <div class="timetable">
+      <table>
+        <thead><tr><th>출발</th><th>유형</th><th>소요</th><th>요금</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td>10:25</td><td>일반</td><td>50분</td><td>¥520</td><td>이름</td></tr>
+          <tr class="highlight"><td>12:40</td><td>일반</td><td>50분</td><td>¥520</td><td>★ 추천</td></tr>
+          <tr><td>15:35</td><td>일반</td><td>50분</td><td>¥520</td><td>대안</td></tr>
+          <tr><td>17:00</td><td>일반</td><td>50분</td><td>¥520</td><td>최종 차량</td></tr>
+          <tr><td>20:30</td><td>고속선</td><td>30분</td><td>¥1,220</td><td>마지막</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 class="section-title">나오시마 섬 내</h2>
+
+  <div class="card">
+    <h3><span class="icon">🚌</span>마을버스 (町営バス)</h3>
+    <div class="row"><div class="label">요금</div><div class="value"><b>¥100/인</b> 현금만 (¥100 동전)</div></div>
+    <div class="row"><div class="label">노선</div><div class="value">미야노우라 ↔ 혼무라 ↔ 츠츠지소</div></div>
+    <div class="row"><div class="label">배차</div><div class="value">30~60분 간격</div></div>
+    <div class="note">⚠️ <b>마지막 츠츠지소행: 20:45</b><br>놓치면 도보 1시간 또는 택시</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">🚕</span>택시 (비상용)</h3>
+    <div class="row"><div class="label">호출</div><div class="value">直島観光協会 087-892-2299</div></div>
+    <div class="row"><div class="label">요금</div><div class="value">미야노우라 → 츠츠지소 ¥1,500~2,000</div></div>
+  </div>
+
+</section>
+
+<!-- ============ 식당 ============ -->
+<section id="food" class="section">
+
+  <h2 class="section-title">식사 라인업</h2>
+  <p class="section-sub">9끼 + 백업 식당</p>
+
+  <div class="restaurant">
+    <div class="meal-time">
+      <div class="day">6/30</div><div class="time">21:00</div><div class="kind">저녁</div>
+    </div>
+    <div class="info">
+      <div class="name">🐙 たこ讃 さしみ一品</div>
+      <div class="meta">
+        <span class="badge pending">예약 확인</span>
+        4.5⭐ · 사누키 문어·사시미 전문<br>
+        ¥2,000~6,000 · ☎ 087-851-9039
+      </div>
+    </div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/1</div><div class="time">07:00</div><div class="kind">아침</div></div>
+    <div class="info"><div class="name">JR Hotel Clement 뷔페</div><div class="meta"><span class="badge booked">호텔</span>¥2,500/인 · 06:30~10:00</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/1</div><div class="time">13:30</div><div class="kind">점심</div></div>
+    <div class="info"><div class="name">🍱 EAT LOCAL NAOSHIMA SHOKUDO</div><div class="meta"><span class="badge walk-in">워크인</span>직도 식자재 일식 정식 · OHANA 도보 1분 · 11:00~14:30 L.O.</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/1</div><div class="time">18:00</div><div class="kind">저녁</div></div>
+    <div class="info"><div class="name">🍣 New Olympia <span class="ja">松 ¥6,000</span></div><div class="meta"><span class="badge booked">예약 완료</span>회·사시미 정찬 + 사케 · 미야노우라 · Instagram 예약 확정</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/2</div><div class="time">09:10</div><div class="kind">아침</div></div>
+    <div class="info"><div class="name">☕ SPARKY's Coffee</div><div class="meta"><span class="badge walk-in">워크인</span>모닝 ¥600 · 미야노우라 2310-40 · 08:00~16:00</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/2</div><div class="time">13:45</div><div class="kind">점심</div></div>
+    <div class="info"><div class="name">🍜 手打十段 うどんバカ一代</div><div class="meta"><span class="badge walk-in">워크인</span>부타다마 명점 · 다카마쓰역 도보 10분 · ¥800~1,200</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/2</div><div class="time">19:00</div><div class="kind">저녁</div></div>
+    <div class="info"><div class="name">🍣 해물 우마이몬야 하마카이도</div><div class="meta"><span class="badge pending">예약 필요</span>해산물 이자카야 · 4.3⭐ · ¥3,000~5,000</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/3</div><div class="time">08:00</div><div class="kind">아침</div></div>
+    <div class="info"><div class="name">JR Hotel Clement 뷔페</div><div class="meta"><span class="badge booked">호텔</span>¥2,500/인 · 여유롭게</div></div>
+  </div>
+
+  <div class="restaurant">
+    <div class="meal-time"><div class="day">7/3</div><div class="time">12:30</div><div class="kind">점심</div></div>
+    <div class="info"><div class="name">🍣 세토노마쓰리 스시 효고마치점</div><div class="meta"><span class="badge pending">예약/워크인</span>4.0⭐ · 가성비 초밥 · ¥2,000~3,000</div></div>
+  </div>
+
+  <h2 class="section-title">나오시마 백업</h2>
+
+  <div class="card">
+    <h3><span class="icon">🥢</span>OHANA 인근</h3>
+    <div class="row"><div class="label">Pasta REGARO</div><div class="value">이탈리안 디너 · 목 휴무</div></div>
+    <div class="row"><div class="label">Ramen Tsumu</div><div class="value">라멘 · 월 휴무</div></div>
+    <div class="row"><div class="label">SPICE CURRY</div><div class="value">카레 · 일/월 휴무</div></div>
+    <div class="row"><div class="label">Tsutsuji-so</div><div class="value">BBQ·스키야키 · 3일 전 예약</div></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">🏘</span>혼무라</h3>
+    <div class="row"><div class="label">Konichiwa</div><div class="value">수제 카레 · 10~18시</div></div>
+    <div class="row"><div class="label">Aisunao</div><div class="value">비건 정식 · 월/화 휴무</div></div>
+    <div class="row"><div class="label">LUKE'S</div><div class="value">화덕 피자</div></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">⚓</span>미야노우라</h3>
+    <div class="row"><div class="label">Cin.na.mon</div><div class="value">이자카야 · 월 휴무</div></div>
+    <div class="row"><div class="label">Little Plum</div><div class="value">양식 · 목 휴무</div></div>
+    <div class="row"><div class="label">Seaview Nagomi</div><div class="value">양식 + 바다 뷰</div></div>
+  </div>
+
+</section>
+
+<!-- ============ 정보 ============ -->
+<section id="info" class="section">
+
+  <h2 class="section-title">미술관 입장 가이드</h2>
+
+  <div class="card">
+    <h3><span class="icon">🎟</span>QR 코드 사용법</h3>
+    <div class="row"><div class="label">입장</div><div class="value">게이트에서 폰 화면 QR 스캔</div></div>
+    <div class="row"><div class="label">늦음</div><div class="value"><b>30분 이상 늦으면 무효</b></div></div>
+    <div class="row"><div class="label">취소</div><div class="value">예약 시간 30분 전까지 가능</div></div>
+    <div class="row"><div class="label">재입장</div><div class="value">❌ 불가</div></div>
+    <div class="row"><div class="label">촬영</div><div class="value">❌ 미술관 내 금지</div></div>
+    <div class="row"><div class="label">짐</div><div class="value">입구 라커 보관 의무</div></div>
+    <div class="tip">💡 QR 코드 4명 폰에 캡쳐 + 단톡방 백업</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="icon">📅</span>예약 미술관 5건</h3>
+    <div class="row"><div class="label">7/1 10:45</div><div class="value">지중미술관 ¥2,500 × 4</div></div>
+    <div class="row"><div class="label">7/1 미지정</div><div class="value">이우환미술관 ¥1,200 × 4</div></div>
+    <div class="row"><div class="label">7/1 14:30</div><div class="value">베넷세 + 밸리 ¥1,300 × 4</div></div>
+    <div class="row"><div class="label">7/2 10:20</div><div class="value">신미술관 ¥1,500 × 4</div></div>
+  </div>
+
+  <h2 class="section-title">💴 결제·환전</h2>
+  <div class="card">
+    <div class="row"><div class="label">카드 가능</div><div class="value">미술관·호텔·페리</div></div>
+    <div class="row"><div class="label">현금만</div><div class="value">나오시마 식당 약 30% · 마을버스</div></div>
+    <div class="row"><div class="label">권장</div><div class="value"><b>1인 ¥20,000~30,000</b> 환전</div></div>
+    <div class="tip">💡 ¥1,000 + 잔돈 풍부하게 (버스·자동발권기)</div>
+  </div>
+
+  <h2 class="section-title">☀️ 날씨·일출일몰</h2>
+  <div class="card">
+    <div class="row"><div class="label">기온</div><div class="value">25~32°C, 습도 80%+</div></div>
+    <div class="row"><div class="label">강수</div><div class="value">장마 막바지, 우산 필수</div></div>
+    <div class="row"><div class="label">일출</div><div class="value">04:55</div></div>
+    <div class="row"><div class="label">일몰</div><div class="value">19:13</div></div>
+    <div class="tip">📌 통풍복 + 얇은 가디건 + 모자·선크림</div>
+  </div>
+
+  <h2 class="section-title">📞 비상 연락처</h2>
+
+  <div class="emergency">
+    <div class="contact"><span>直島観光協会 (택시)</span><a href="tel:+81878922299">전화</a></div>
+    <div class="contact"><span>JR Hotel Clement</span><a href="tel:+81878111111">전화</a></div>
+    <div class="contact"><span>たこ讃 さしみ一品</span><a href="tel:+81878519039">전화</a></div>
+    <div class="contact"><span>주오사카 한국 총영사관</span><a href="tel:+81642562345">전화</a></div>
+    <div class="contact"><span>일본 응급</span><a href="tel:119">119</a></div>
+    <div class="contact"><span>일본 경찰</span><a href="tel:110">110</a></div>
+  </div>
+
+  <h2 class="section-title">🎒 준비물</h2>
+  <div class="card">
+    <div class="row"><div class="label">필수</div><div class="value">여권·카드·현금 ¥20~30만/인·충전기</div></div>
+    <div class="row"><div class="label">의복</div><div class="value">통풍복·가디건·우산·운동화</div></div>
+    <div class="row"><div class="label">미술관</div><div class="value">QR 4명×5개=20장 캡쳐</div></div>
+    <div class="row"><div class="label">기타</div><div class="value">선크림·모기약·보조배터리·eSIM</div></div>
+  </div>
+
+</section>
+
+</main>
+
+<nav>
+  <button class="tab-btn active" data-tab="schedule"><span class="ic">📅</span>일정</button>
+  <button class="tab-btn" data-tab="transport"><span class="ic">🚌</span>교통</button>
+  <button class="tab-btn" data-tab="food"><span class="ic">🍽</span>식당</button>
+  <button class="tab-btn" data-tab="info"><span class="ic">ℹ️</span>정보</button>
+</nav>
+
+<footer>
+  © 2026 수요미식회 · 다카마쓰·나오시마 v2.0
+</footer>
+
+<script>
+/* ============ TAB SWITCHING ============ */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+/* ============ DAY ACCORDION ============ */
+document.querySelectorAll('.day-header').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+
+/* ============ D-DAY + CURRENT EVENT HIGHLIGHTER ============ */
+function updateCurrentEvent(){
+  // Adjust for Japan Time (KST=JST, both UTC+9). User from Korea uses same time as Japan.
+  const now = new Date();
+  // D-Day calculation (trip starts 2026-06-30)
+  const tripStart = new Date('2026-06-30T00:00:00+09:00');
+  const tripEnd = new Date('2026-07-03T23:59:59+09:00');
+  const diffStart = Math.floor((tripStart - now)/(1000*60*60*24));
+  const ddayPill = document.getElementById('dday-pill');
+  if(ddayPill){
+    if(now < tripStart){
+      ddayPill.textContent = `D-${diffStart+1}`;
+    }else if(now <= tripEnd){
+      const day = Math.floor((now - tripStart)/(1000*60*60*24)) + 1;
+      ddayPill.textContent = `DAY ${day}`;
+      ddayPill.style.background = '#2A9D8F';
+    }else{
+      ddayPill.textContent = 'D+'+Math.floor((now-tripEnd)/(1000*60*60*24));
+      ddayPill.style.background = '#6B7280';
+    }
+  }
+
+  // Clear previous "current" highlights
+  document.querySelectorAll('.event.current').forEach(e=>e.classList.remove('current'));
+
+  // Find the current day card
+  const todayStr = now.toISOString().split('T')[0];
+  const currentDay = document.querySelector(`.day-card[data-day="${todayStr}"]`);
+  const banner = document.getElementById('now-banner');
+  const bannerText = document.getElementById('next-event-text');
+
+  if(!currentDay){
+    // Not a trip day — find next upcoming day
+    if(now < tripStart){
+      banner.classList.remove('hidden');
+      const days = Math.ceil((tripStart - now)/(1000*60*60*24));
+      bannerText.textContent = `출발까지 D-${days} · 즐거운 여행 준비 중!`;
+    }else if(now > tripEnd){
+      banner.classList.add('hidden');
+    }else{
+      banner.classList.add('hidden');
+    }
+    return;
+  }
+
+  // Open current day card automatically
+  currentDay.classList.add('open');
+
+  // Get all events sorted by time
+  const events = currentDay.querySelectorAll('.event[data-time]');
+  const currentHM = now.getHours()*60 + now.getMinutes();
+  let currentEvent = null;
+  let nextEvent = null;
+
+  events.forEach((evt, idx)=>{
+    const [h, m] = evt.dataset.time.split(':').map(Number);
+    const evtMin = h*60 + m;
+    const nextEvt = events[idx+1];
+    let nextMin = 24*60;
+    if(nextEvt){
+      const [nh, nm] = nextEvt.dataset.time.split(':').map(Number);
+      nextMin = nh*60 + nm;
+    }
+    if(currentHM >= evtMin && currentHM < nextMin){
+      currentEvent = evt;
+    }
+    if(!nextEvent && evtMin > currentHM){
+      nextEvent = evt;
+    }
+  });
+
+  // Highlight the current event (or next if none active)
+  const eventToHighlight = currentEvent || nextEvent;
+  if(eventToHighlight){
+    eventToHighlight.classList.add('current');
+    const title = eventToHighlight.querySelector('.title').textContent.replace(/[🐙🍣🚢🎟🎃🍜🍱☕✈️⚠️🍶🌅]/g,'').trim();
+    const time = eventToHighlight.dataset.time;
+    banner.classList.remove('hidden');
+    if(currentEvent === eventToHighlight){
+      bannerText.textContent = `진행중 · ${time} ${title}`;
+    }else{
+      bannerText.textContent = `다음 일정 · ${time} ${title}`;
+    }
+
+    // Scroll to current event if first load
+    if(!window._scrolled){
+      window._scrolled = true;
+      setTimeout(()=>{
+        eventToHighlight.scrollIntoView({behavior:'smooth', block:'center'});
+      }, 600);
+    }
+  }else{
+    banner.classList.add('hidden');
+  }
+}
+
+// Initial open: first day card
+document.querySelector('.day-card').classList.add('open');
+
+// Run on load + every minute
+updateCurrentEvent();
+setInterval(updateCurrentEvent, 60000);
+</script>
+
+</body>
+</html>
